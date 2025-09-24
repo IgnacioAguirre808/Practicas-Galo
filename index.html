@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
@@ -7,36 +8,43 @@
 </head>
 
 <body>
-  <header id="header">
-    <div id="header-container">
-      <div id="brand">
-        <div id="logo">PM</div>
+  <!-- BARRA SUPERIOR -->
+  <header id="barra-arriba">
+    <div class="caja">
+      <div class="marca">
+        <div class="logo">PM</div>
         <div>
           <h1>Pagina Mayorista demo</h1>
           <div style="font-size:12px;color:var(--muted)">Venta al por mayor ·</div>
         </div>
       </div>
-      <div id="header-right">
+
+      <div class="botones-arriba">
         <button class="btn">Contacto</button>
         <button class="btn">Catálogo</button>
-        <a href="login.html" target="_blank" class="btn btn-primary">Iniciar sesión</a>
+
+        <!--boton de inicio de sesion sin funcion todavia-->
+        <div class="user">
+          <a href="login.html" target="_blank" class="btn btn-primary">Iniciar sesión</a>
+        </div>
       </div>
     </div>
   </header>
 
   <main>
-    <section id="hero">
-      <div id="hero-grid">
-        <div id="hero-card">
-          <h2>-linea de texto introductoria-</h2>
-          <p>-linea de texto pero para una descripcion del tipo de ventas-</p>
-          <a href="#productos" class="cta">Ver productos</a>
+    <!-- PARTE PRINCIPAL  -->
+    <section id="parte-principal">
+      <div class="rejilla-principal">
+        <div class="cajon-intro">
+          <h2> -linea de texto introductoria- </h2>
+          <p> -linea de texto pero para una descripcion del tipo de ventas- </p>
+          <a href="#seccion-productos" class="cta">Ver productos</a>
         </div>
 
-        <div style="display:flex;flex-direction:column;gap:12px">
+        <div class="cajitas-extra" style="display:flex;flex-direction:column;gap:12px">
           <div class="info-box">
             <strong>- categorias o lo que sea -</strong>
-            <div style="color:var(--muted);font-size:13px">- alguna otra descipcion-</div>
+            <div style="color:var(--muted);font-size:13px"> - alguna otra descipcion- </div>
           </div>
           <div class="info-box">
             <strong>- categorias o lo que sea -</strong>
@@ -44,54 +52,82 @@
           </div>
         </div>
       </div>
-    </section> 
+    </section>
 
-    <!-- productos -->
-  <section id="productos" class="products">
-  <h3 style="margin:10px 0 12px 0;font-size:20px">Productos destacados</h3>
-  <div class="grid">
+    <!-- SECCION DE PRODUCTOS -->
+    <section id="seccion-productos">
+      <h3 style="margin:10px 0 12px 0;font-size:20px">Productos destacados</h3>
+      <div id="lista-productos">
+        <!-- Cada tarjeta es un enlace a detalleprodct.html -->
+        <a href="detalleprodct.html" class="tarjeta-link">
+          <article class="tarjeta-producto">
+            <div class="foto-producto">Producto</div>
+            <div class="nombre-producto">Producto</div>
+            <div class="marca-producto">Marca</div>
+            <div class="detalle-bulto">Precio por bulto como en paginas mayoristas</div>
+            <div class="precio-final">Precio</div>
+          </article>
+        </a>
 
-    <a href="productos.html" class="card-link">
-      <article class="card">
-        <div class="thumb">Producto</div>
-        <div class="title">Producto</div>
-        <div class="meta">Marca</div>
-        <div class="bulk">Precio por bulto como en paginas mayoristas</div>
-        <div class="price">Precio</div>
-      </article>
-    </a>
+        <a href="detalleprodct.html" class="tarjeta-link">
+          <article class="tarjeta-producto">
+            <div class="foto-producto">Producto</div>
+            <div class="nombre-producto">Producto</div>
+            <div class="marca-producto">Marca</div>
+            <div class="detalle-bulto">Precio por bulto como en paginas mayoristas</div>
+            <div class="precio-final">Precio</div>
+          </article>
+        </a>
 
-  <a href="productos.html" class="card-link">
-      <article class="card">
-        <div class="thumb">Producto</div>
-        <div class="title">Producto</div>
-        <div class="meta">Marca</div>
-        <div class="bulk">Precio por bulto como en paginas mayoristas</div>
-        <div class="price">Precio</div>
-      </article>
-    </a>
+        <a href="detalleprodct.html" class="tarjeta-link">
+          <article class="tarjeta-producto">
+            <div class="foto-producto">Producto</div>
+            <div class="nombre-producto">Producto</div>
+            <div class="marca-producto">Marca</div>
+            <div class="detalle-bulto">Precio por bulto como en paginas mayoristas</div>
+            <div class="precio-final">Precio</div>
+          </article>
+        </a>
 
-   <a href="productos.html" class="card-link">
-      <article class="card">
-        <div class="thumb">Producto</div>
-        <div class="title">Producto</div>
-        <div class="meta">Marca</div>
-        <div class="bulk">Precio por bulto como en paginas mayoristas</div>
-        <div class="price">Precio</div>
-      </article>
-    </a>
+        <a href="detalleprodct.html" class="tarjeta-link">
+          <article class="tarjeta-producto">
+            <div class="foto-producto">Producto</div>
+            <div class="nombre-producto">Producto</div>
+            <div class="marca-producto">Marca</div>
+            <div class="detalle-bulto">Precio por bulto como en paginas mayoristas</div>
+            <div class="precio-final">Precio</div>
+          </article>
+        </a>
 
-    <!-- Repetir igual para los demás productos -->
-    
-  </div>
-</section>
+        <a href="detalleprodct.html" class="tarjeta-link">
+          <article class="tarjeta-producto">
+            <div class="foto-producto">Producto</div>
+            <div class="nombre-producto">Producto</div>
+            <div class="marca-producto">Marca</div>
+            <div class="detalle-bulto">Precio por bulto como en paginas mayoristas</div>
+            <div class="precio-final">Precio</div>
+          </article>
+        </a>
+
+        <a href="detalleprodct.html" class="tarjeta-link">
+          <article class="tarjeta-producto">
+            <div class="foto-producto">Producto</div>
+            <div class="nombre-producto">Producto</div>
+            <div class="marca-producto">Marca</div>
+            <div class="detalle-bulto">Precio por bulto como en paginas mayoristas</div>
+            <div class="precio-final">Precio</div>
+          </article>
+        </a>
+      </div>
+    </section>
   </main>
 
-  <footer id="footer">
-    <div id="foot-inner">
+  <footer id="abajo-pagina">
+    <div id="texto-abajo">
       <div>Pagina mayorista isfd n24</div>
     </div>
   </footer>
 </body>
 </html>
+
 

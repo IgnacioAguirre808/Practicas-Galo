@@ -52,11 +52,40 @@ html, body { height: 100%; background: var(--bg); color: var(--dark); }
 #abajo-pagina { margin-top:28px; padding:28px 20px; }
 #texto-abajo { max-width:1150px; margin:0 auto; display:flex; justify-content:space-between; color:var(--muted); }
 
-/* ESTILOS EXTRA PARA DETALLE (si la página los tiene también se aplican) */
+/* ESTILOS EXTRA PARA DETALLE */
 #caja-detalle { /* definiciones propias en detalleprodct.html */ }
 
 /* RESPONSIVE */
 @media(max-width:880px) {
   .grid-principal { grid-template-columns:1fr; }
   #lista-productos { grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); }
+
+  /* ===== ESTILOS EXTRA PARA LA PAGINA DE CATEGORIAS ===== */
+
+/* Ajuste del contenedor de categorías */
+#seccion-categorias .Productos {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  text-align: center;
+}
+
+/* Tarjetas de categorías */
+#seccion-categorias .tarjetas-prod {
+  padding: 30px 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#seccion-categorias .tarjetas-prod:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Icono de la categoría (emoji o imagen) */
+#seccion-categorias .foto-producto {
+  font-size: 40px;
+  height: auto;
+  background: none;
+  margin-bottom: 10px;
+}
+
 }

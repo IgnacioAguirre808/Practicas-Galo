@@ -6,47 +6,92 @@
   <title>Detalle del producto</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* estilos específicos de esta página */
-    #caja-detalle {
-      max-width: 1150px;
-      margin: 30px auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-    }
-    #imagen-grande {
-      background: #f1f5f9;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 400px;
-      font-size: 20px;
-      color: var(--muted);
-    }
-    #datos-producto {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    #datos-producto h2 {
-      font-size: 26px;
-      font-weight: 700;
-    }
-    #precio-grande {
-      font-size: 22px;
-      font-weight: 800;
-      color: var(--accent);
-    }
-    #texto-detalle {
-      color: var(--muted);
-      font-size: 15px;
-      line-height: 1.5;
-    }
+    #caja-detalle { max-width: 1150px; margin: 30px auto; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    #datos-producto { display: flex; flex-direction: column; gap: 16px; }
+    #datos-producto h2 { font-size: 26px; font-weight: 700; }
+    #precio-grande { font-size: 22px; font-weight: 800; color: var(--accent); }
+    #texto-detalle { color: var(--muted); font-size: 15px; line-height: 1.5; }
     #botones-compra { display:flex; gap:12px; }
+
+    #galeria-producto { display: flex; gap: 15px; }
+    
+    #galeria-producto input[type="radio"] { display: none; }
+    
+    
+    #thumbnails { display: flex; flex-direction: column; gap: 10px; width: 60px; }
+    
+
+    #main-image-container { 
+        flex-grow: 1; 
+        border-radius: 12px; 
+        height: 400px; 
+        background-color: #ffffff; 
+        position: relative; 
+        overflow: hidden; 
+    }
+    
+    #main-image-wrapper {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .gallery-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0; 
+        transition: opacity 0.3s ease-in-out;
+        background-size: contain; 
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: transparent;
+    }
+
+    /* selector que muestra la imagen */
+    #thumb-1:checked ~ #main-image-container .image-1,
+    #thumb-2:checked ~ #main-image-container .image-2,
+    #thumb-3:checked ~ #main-image-container .image-3,
+    #thumb-4:checked ~ #main-image-container .image-4,
+    #thumb-5:checked ~ #main-image-container .image-5 {
+        opacity: 1; 
+        z-index: 10;
+    }
+
+    /* estilo miniaturas */
+    .thumbnail {
+      display: block;
+      width: 60px;
+      height: 60px;
+      border: 2px solid var(--bg);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background-size: contain; 
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #ffffff;
+      opacity: 0.9;
+    }
+    /*  miniatura activa */
+    #thumb-1:checked ~ #thumbnails label[for="thumb-1"],
+    #thumb-2:checked ~ #thumbnails label[for="thumb-2"],
+    #thumb-3:checked ~ #thumbnails label[for="thumb-3"],
+    #thumb-4:checked ~ #thumbnails label[for="thumb-4"],
+    #thumb-5:checked ~ #thumbnails label[for="thumb-5"] {
+        border-color: var(--accent);
+        opacity: 1;
+    }
+    .thumbnail:hover { border-color: var(--dark); opacity: 1; }
+    
+    /* responsive */
     @media(max-width:880px) {
       #caja-detalle { grid-template-columns: 1fr; }
-      #imagen-grande { height:250px; }
+      #galeria-producto { flex-direction: column; }
+      #thumbnails { flex-direction: row; width: 100%; justify-content: flex-start; }
+      #main-image-container { height: 250px; }
     }
   </style>
 </head>
@@ -56,29 +101,53 @@
       <div class="marca">
         <div class="logo">PM</div>
         <div>
-          <h1>Portal Mayorista — Demo</h1>
+          <h1>Portal Mayorista</h1>
         </div>
       </div>
       <div class="botones-arriba">
         <a href="index.html" class="btn">Inicio</a>
-        <a href="login.html" target="_blank" class="btn btn-primary">Iniciar sesión</a>
+        <a href="categorias.html" class="btn">Categorías</a>
+        <a href="login.html" class="btn">Iniciar sesión</a>
       </div>
     </div>
   </header>
 
   <main>
     <div id="caja-detalle">
-      <div id="imagen-grande">Foto del producto</div>
+      
+      <div id="galeria-producto">
+        
+        <input type="radio" id="thumb-1" name="gallery" checked>
+        <input type="radio" id="thumb-2" name="gallery">
+        <input type="radio" id="thumb-3" name="gallery">
+        <input type="radio" id="thumb-4" name="gallery">
+        <input type="radio" id="thumb-5" name="gallery">
+        
+        <div id="thumbnails">
+            <label for="thumb-1" class="thumbnail" style="background-image: url('img/D_Q_NP_918687-MLA88109800191_072025-R.webp');"></label>
+            <label for="thumb-2" class="thumbnail" style="background-image: url('img/D_Q_NP_866540-MLA89331370824_082025-R.webp');"></label>
+            <label for="thumb-3" class="thumbnail" style="background-image: url('img/D_Q_NP_862288-MLA88109839281_072025-R.webp');"></label>
+            <label for="thumb-4" class="thumbnail" style="background-image: url('img/D_Q_NP_846896-MLA89331420160_082025-R.webp');"></label>
+            <label for="thumb-5" class="thumbnail" style="background-image: url('img/D_Q_NP_765233-MLA88109800225_072025-R.webp');"></label>
+        </div>
 
+        <div id="main-image-container">
+            <div id="main-image-wrapper">
+                <div class="gallery-image image-1" style="background-image: url('img/D_Q_NP_918687-MLA88109800191_072025-R.webp');"></div>
+                <div class="gallery-image image-2" style="background-image: url('img/D_Q_NP_866540-MLA89331370824_082025-R.webp');"></div>
+                <div class="gallery-image image-3" style="background-image: url('img/D_Q_NP_862288-MLA88109839281_072025-R.webp');"></div>
+                <div class="gallery-image image-4" style="background-image: url('img/D_Q_NP_846896-MLA89331420160_082025-R.webp');"></div>
+                <div class="gallery-image image-5" style="background-image: url('img/D_Q_NP_765233-MLA88109800225_072025-R.webp');"></div>
+            </div>
+        </div>
+      </div>
       <div id="datos-producto">
-        <h2>Nombre del producto X</h2>
-        <div id="precio-grande">$ 25.000</div>
-        <div class="detalle-meta">Marca: Genérica · Presentación: Pack x12 unidades</div>
+        <h2>Banqueta Vohler Taburete Regulable Premiun Pack x2 (Blanca)</h2>
+        <div id="precio-grande">$ 90.000</div>
+        <div class="detalle-meta">Marca: Vohler · Color: Blanco · Acabado: Cromado · Bulto: 4 Packs</div>
 
         <p id="texto-detalle">
-          Este es un producto mayorista pensado para tu negocio. Se ofrece en
-          presentación por bulto para optimizar tu compra y asegurar mejores
-          márgenes de ganancia. Ideal para comercios minoristas o distribuidores.
+          Este es el producto Banqueta Vohler blanca. La compra mínima es de un bulto (4 packs de 2 unidades). Este es un producto mayorista pensado para tu negocio. Se ofrece en presentación por bulto para optimizar tu compra y asegurar mejores márgenes de ganancia. Ideal para comercios minoristas o distribuidores.
         </p>
 
         <div id="botones-compra">
@@ -91,9 +160,8 @@
 
   <footer id="abajo-pagina">
     <div id="texto-abajo">
-      <div>© 2025 Portal Mayorista — Demo</div>
+      <div>© 2025 Portal Mayorista</div>
     </div>
   </footer>
 </body>
 </html>
-

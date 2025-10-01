@@ -3,119 +3,144 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Pagina Mayorista demo</title>
+  <title>Pagina Mayorista</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+/*banquetas*/
+    .foto-producto.img1 { background-image: url('img/D_Q_NP_918687-MLA88109800191_072025-R.webp'); background-size: contain; background-repeat: no-repeat; background-position: center; background-color: #fff; }
+    .foto-producto.img2 { background-image: url('img/D_Q_NP_626541-MLA87866541116_072025-R.webp'); background-size: contain; background-repeat: no-repeat; background-position: center; background-color: #fff; }
+    /*bebidas*/
+    .foto-producto.img3 { background-image: url('img/D_Q_NP_798567-MLA79450370793_092024-R.webp'); background-size: contain; background-repeat: no-repeat; background-position: center; background-color: #0d0f17; }
+    .foto-producto.img4 { background-image: url('img/D_Q_NP_826922-MLA93359763407_092025-R.webp'); background-size: contain; background-repeat: no-repeat; background-position: center; background-color: #fce4ec; }
+    
+    /* camara pro */
+    .foto-producto.img5 { background-image: url('img/D_Q_NP_789485-MLA92386666470_092025-R.webp'); background-size: contain; background-repeat: no-repeat; background-position: center; background-color: #f0f0f0; }
+    
+    /* mini camara */
+    .foto-producto.img6 { background-image: url('img/D_Q_NP_784044-MLA79208316300_092024-R.webp'); background-size: contain; background-repeat: no-repeat; background-position: center; background-color: #f0f0f0; }
+  </style>
 </head>
 
 <body>
-  <!-- BARRA SUPERIOR -->
   <header id="barra-arriba">
     <div class="caja">
       <div class="marca">
         <div class="logo">PM</div>
         <div>
-          <h1>Pagina Mayorista demo</h1>
+          <h1>Pagina Mayorista </h1>
           <div style="font-size:12px;color:var(--muted)">Venta al por mayor ·</div>
         </div>
       </div>
 
       <div class="botones-arriba">
-<div class="botones-arriba">
-  <a href="index.html" class="btn">Inicio</a>
-  <a href="categorias.html" class="btn">Categorías</a>
-  <a href="index.html" class="btn">Catálogo</a>
-    <!--boton de inicio de sesion sin funcion todavia-->
-  <a href="login.html" target="_blank" class="btn btn-primary">Iniciar sesión</a>
-</div>
+        <a href="index.html" class="btn">Inicio</a>
+        <a href="categorias.html" class="btn">Categorías</a>
+        <a href="login.html" target="_blank" class="btn btn-primary">Iniciar sesión</a>
+      </div>
     </div>
 
   </header>
 
   <main>
-    <!-- PARTE PRINCIPAL  -->
     <section id="parte-principal">
       <div class="grid-principal">
         <div class="caja-intro">
-          <h2> -linea de texto introductoria- </h2>
-          <p> -linea de texto pero para una descripcion del tipo de ventas- </p>
+          <h2> ¡Bienvenido a Portal Mayorista! Encuentra los mejores precios por bulto y lleva tu negocio al siguiente nivel.</h2>
+          <p> Explora nuestro Catalogo Mayorista exclusivo de productos de alta rotación, pensados para maximizar tu margen de ganancia. </p>
           <a href="#seccion-productos" class="cta">Ver productos</a>
         </div>
 
         <div class="cajitas-extra" style="display:flex;flex-direction:column;gap:12px">
           <div class="info-box">
-            <strong>- categorias o lo que sea -</strong>
-            <div style="color:var(--muted);font-size:13px"> - alguna otra descipcion- </div>
+            <strong>Somos tu socio estratégico en el negocio mayorista. Accede a precios imbatibles y stock garantizado.</strong>
+           
           </div>
           <div class="info-box">
-            <strong>- categorias o lo que sea -</strong>
-            <div style="color:var(--muted);font-size:13px">- alguna otra descipcion-</div>
+            <div style="color:var(--muted);font-size:13px">
+  
+  <strong>Inmuebles</strong>
+  <ul>
+    <li>Banqueta Vohler Pack x2 (Blanca) - Vohler (Pack x4 Bultos)</li>
+    <li>Banqueta Vohler Pack x2 (Negra) - Vohler (Pack x4 Bultos)</li>
+  </ul>
+  
+  <strong>Bebidas</strong>
+  <ul>
+    <li>Whisky Royal Salute 21 años - Chivas Regal (Bulto x3 Botellas)</li>
+    <li>Vodka Sernova Candy Edition - Sernova (Pack x6 Botellas)</li>
+  </ul>
+  
+  <strong>Tecnología</strong>
+  <ul>
+    <li>Cámara Profesional Compacta - Canon (Caja x2 Unidades)</li>
+    <li>Mini Cámara de Seguridad WiFi - Hikvision (Bulto x10 Unidades)</li>
+  </ul>
+</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECCION DE PRODUCTOS -->
     <section id="seccion-productos">
       <h3 style="margin:10px 0 12px 0;font-size:20px">Productos destacados</h3>
       <div id="lista-productos">
-        <!-- Cada tarjeta es un enlace a detalleprodct.html -->
-         <a href="detalleprodct.html" class="tarjeta-link">
+        <a href="detalleprodct.html" class="tarjeta-link">
           <article class="tarjeta-producto">
-            <div class="foto-producto">Producto</div>
-            <div class="nombre-producto">Producto</div>
-            <div class="marca-producto">Marca</div>
-            <div class="detalle-bulto">Precio por bulto como en paginas mayoristas</div>
-            <div class="precio-final">Precio</div>
+            <div class="foto-producto img1"></div>
+            <div class="nombre-producto">Banqueta Vohler Pack x2 (Blanca)</div>
+            <div class="marca-producto">Vohler</div>
+            <div class="detalle-bulto">Bulto x4 Packs</div>
+            <div class="precio-final">$ 90.000</div>
           </article>
         </a>
 
-          <a href="detalleprodct.html" class="tarjeta-link">
+        <a href="detalleprodct.html" class="tarjeta-link">
           <article class="tarjeta-producto">
-            <div class="foto-producto">Producto</div>
-            <div class="nombre-producto">Producto</div>
-            <div class="marca-producto">Marca</div>
-            <div class="detalle-bulto">Precio por bulto como en paginas mayoristas</div>
-            <div class="precio-final">Precio</div>
+            <div class="foto-producto img2"></div>
+            <div class="nombre-producto">Banqueta Vohler Pack x2 (Negra)</div>
+            <div class="marca-producto">Vohler</div>
+            <div class="detalle-bulto">Bulto x4 Packs</div>
+            <div class="precio-final">$ 95.000</div>
           </article>
         </a>
 
        <a href="detalleprodct.html" class="tarjeta-link">
           <article class="tarjeta-producto">
-            <div class="foto-producto">Producto</div>
-            <div class="nombre-producto">Producto</div>
-            <div class="marca-producto">Marca</div>
-            <div class="detalle-bulto">Precio por bulto como en paginas mayoristas</div>
-            <div class="precio-final">Precio</div>
+            <div class="foto-producto img3"></div>
+            <div class="nombre-producto">Whisky Royal Salute 21 años (Morado)</div>
+            <div class="marca-producto">Chivas Regal</div>
+            <div class="detalle-bulto">Caja x3 Botellas</div>
+            <div class="precio-final">$ 180.000</div>
           </article>
         </a>
 
-           <a href="detalleprodct.html" class="tarjeta-link">
+        <a href="detalleprodct.html" class="tarjeta-link">
           <article class="tarjeta-producto">
-            <div class="foto-producto">Producto</div>
-            <div class="nombre-producto">Producto</div>
-            <div class="marca-producto">Marca</div>
-            <div class="detalle-bulto">Precio por bulto como en paginas mayoristas</div>
-            <div class="precio-final">Precio</div>
+            <div class="foto-producto img4"></div>
+            <div class="nombre-producto">Vodka Sernova Candy Edition</div>
+            <div class="marca-producto">Sernova</div>
+            <div class="detalle-bulto">Pack x6 Botellas</div>
+            <div class="precio-final">$ 24.000</div>
           </article>
         </a>
 
-           <a href="detalleprodct.html" class="tarjeta-link">
+        <a href="detalleprodct.html" class="tarjeta-link">
           <article class="tarjeta-producto">
-            <div class="foto-producto">Producto</div>
-            <div class="nombre-producto">Producto</div>
-            <div class="marca-producto">Marca</div>
-            <div class="detalle-bulto">Precio por bulto como en paginas mayoristas</div>
-            <div class="precio-final">Precio</div>
+            <div class="foto-producto img5"></div>
+            <div class="nombre-producto">Cámara Profesional Compacta</div>
+            <div class="marca-producto">Canon</div>
+            <div class="detalle-bulto">Caja x2 Unidades</div>
+            <div class="precio-final">$ 320.000</div>
           </article>
         </a>
 
-            <a href="detalleprodct.html" class="tarjeta-link">
+        <a href="detalleprodct.html" class="tarjeta-link">
           <article class="tarjeta-producto">
-            <div class="foto-producto">Producto</div>
-            <div class="nombre-producto">Producto</div>
-            <div class="marca-producto">Marca</div>
-            <div class="detalle-bulto">Precio por bulto como en paginas mayoristas</div>
-            <div class="precio-final">Precio</div>
+            <div class="foto-producto img6"></div>
+            <div class="nombre-producto">Mini Cámara de Seguridad WiFi</div>
+            <div class="marca-producto">Hikvision</div>
+            <div class="detalle-bulto">Bulto x10 Unidades</div>
+            <div class="precio-final">$ 75.000</div>
           </article>
         </a>
       </div>
@@ -129,5 +154,3 @@
   </footer>
 </body>
 </html>
-
-
